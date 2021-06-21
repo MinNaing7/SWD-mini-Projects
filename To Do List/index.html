@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To Do List</title>
+	<link rel="icon" href="Images/Listlogo.png" type="image/x-icon">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+	<link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+	<section>
+		<div class="mainApp">
+			<div class="section1">
+			    <label for="input"><h2>To Do List</h2></label>
+				<input type="text" id="input" placeholder="Say Something.." onkeyup="enterKey(event)">
+				<button onclick="addItem()"><i class="icon ion-plus-round"></i></button>
+			</div>
+			<div class="section2">
+				<ul id="list">
+				</ul>
+			</div>
+		</div>
+    </section>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

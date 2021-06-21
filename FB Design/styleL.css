@@ -1,0 +1,347 @@
+:root {
+	--primary : #008bf0;
+	--dark : #18191a;
+	--simi-dark : #242526;
+	--soft-dark : #3a3b3c;
+	--danger : #f02849;
+	--success : #44b968;
+	--warning : #dda728;
+	--text : #b7b9bd;
+	--light-text: #fff;
+	--absolute-dark: #000;
+}
+.settingSide {
+	width: 25%;
+	height: 90vh;
+	overflow-y: scroll;
+}	
+.newfeedSide {
+	width: 50%;
+	height: 90vh;
+	overflow-y: scroll;
+}
+.chatboxSide {
+	width: 25%;
+	height: 90vh;
+	overflow-y: scroll;
+}
+.chatboxSide::-webkit-scrollbar,
+.newfeedSide::-webkit-scrollbar,
+.settingSide::-webkit-scrollbar {
+	width: 7px;
+}
+.charboxSide::-webkit-scrollbar-track,
+.newfeedSide::-webkit-scrollbar-track,
+.settingSide::-webkit-scrollbar-track {
+	background-color: var(--dark);
+}
+.chatboxSide::-webkit-scrollbar-thumb,
+.newfeedSide::-webkit-scrollbar-thumb,
+.settingSide::-webkit-scrollbar-thumb {
+	background-color: var(--dark);
+}
+.chatboxSide:hover::-webkit-scrollbar-thumb,
+.newfeedSide:hover::-webkit-scrollbar-thumb,
+.settingSide:hover::-webkit-scrollbar-thumb {
+	background-color: var(--simi-dark);
+	border-radius: 3px;
+}
+.settingBox {
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+}
+.settingBox .items {
+	width: 100%;
+	height: auto;
+	padding: 5px 10px;
+	margin: 0;
+	display: flex;
+	justify-content: flex-start;
+	position: relative;
+}
+.groupHead {
+	width: 100%;
+	padding: 7px 10px;
+	margin: 5px 0;
+	opacity: 0.5;
+}
+.groupItems {
+	padding-top: 8px !important;
+	padding-bottom: 8px !important; 
+}
+.settingBox .items:hover {
+	background-color: var(--simi-dark);
+	border-radius: 10px;
+}
+.itemLogo {
+	width: 25px;
+	margin-right: 10px;
+}
+.groupLogo {
+	width: 40px;
+	margin-right: 10px;
+}
+.myProfileLogo {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-right: 10px;
+}
+.itemName {
+	font-size: 15px;
+}
+.myName {
+	font-size: 18px;
+}
+.itemIcon {
+	font-size: 25px;
+	margin-right: 10px;
+}
+.down {
+	position: absolute;
+	right: 35px;
+}
+.logoutBtn {
+	background-color: var(--simi-dark);
+	margin: 10px;
+	padding: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+}
+.logoutBtn:hover {
+	background-color: var(--absolute-dark);
+}
+.hr {
+	height: 1px;
+	background-color: var(--soft-dark);
+	margin: 10px 0;
+}
+
+.postBox {
+	background-color: var(--simi-dark);
+	border-radius: 10px;
+	margin: 5px 10px;
+	padding-bottom: 10px;
+}
+.postBox .profile {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 5px 10px;
+}
+.postBox .profile .profileImg {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+.postBox .profile .profileName {
+	font-size: 18px;
+}
+.postBox .profile .postTime {
+	font-size: 11px;
+	opacity: 0.5;
+}
+.postBox .post {
+	display: flex;
+	flex-direction: column;
+}
+.postBox .post .postImgBox {
+	display: flex;
+	padding: 0 10px;
+	margin-bottom: 10px;
+}
+.post .postText {
+	padding: 10px;
+}
+.postImgBox .postImg {
+	width: 50%;
+	height: auto;
+}
+.reactBtnBox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 10px;
+}
+
+.reactBtnBox button {
+	background-color: var(--simi-dark);
+	border: none;
+	padding: 10px 15px;
+	flex-grow: 1;
+}
+.reactBtnBox button:hover {
+	background-color: var(--soft-dark);
+	border-radius: 5px;
+}
+.reactBtnBox button i {
+	font-size: 16px;
+	margin-right: 5px;
+}
+.reactions {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	position: relative;
+	margin: 0 10px;
+	margin-bottom: 5px;
+}
+.reactions img {
+	width: 20px;
+}
+.reactions span {
+	font-size: 18px;
+	margin-left: 5px;
+}
+
+.friendlist {
+	width: 100%;
+}
+.friend {
+	margin: 0 10px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 6px 10px;
+}
+.friend:hover {
+	background-color: var(--simi-dark);
+	border-radius: 10px;
+}
+.friendImg {
+	position: relative;
+	display: flex;
+}
+.friendImg img {
+	width: 35px;
+	height: 35px;
+	margin-right: 10px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+.friend:hover .friendImg img {
+	border: 2px solid var(--primary);
+}
+.friendName {
+	font-size: 15px;
+}
+.green {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: var(--success);
+	position: absolute;
+	bottom: 0px;
+	right: 7px;
+}
+.chatboxBar {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 7px 10px;
+	margin-bottom: 0;
+	position: relative;
+}
+.chatboxBar span {
+	float: left;
+	position: absolute;
+	left: 10px;
+	font-size: 20px;
+	opacity: 0.5;
+}
+.chatboxBar i {
+	font-size: 20px;
+	width: 25px;
+	height: 25px;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.chatboxBar i:hover {
+	background-color: var(--simi-dark);
+	border-radius: 50%;
+
+}
+.friendrequestBar {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 7px 0;
+	margin: 10px 0;
+	position: relative;
+}
+.friendrequestBar span {
+	font-size: 20px;
+	margin-left: 10px;
+	opacity: 0.5;
+}
+.friendrequestBar span.count {
+	color: var(--danger);
+} 
+.friendrequestBar span.seeall {
+	color: var(--primary);
+	position: absolute;
+	right: 10px;
+	font-size: 15px;
+	opacity: 1;
+}
+
+.friendrequestBox {
+	width: 100%;
+}
+
+.requestBox {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.imgBox {
+	margin: 0 10px;
+}
+.imgBox .requestImg {
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	margin-left: 10px;
+}
+.nameBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	margin-left: 5px;
+}
+.nameBox span.name {
+	font-size: 18px;
+	color: var(--light-text);
+}
+.nameBox span.mutual {
+	font-size: 15px;
+	opacity: 0.5;
+}
+.buttonBox {
+	margin: 5px 15px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.buttonBox button {
+	padding: 10px;
+	width: 100px;
+	margin-right: 10px;
+	background-color: var(--simi-dark);
+	border-radius: 6px;
+	border: none;
+}
+.buttonBox button:hover {
+	background-color: var(--soft-dark);
+}
+}

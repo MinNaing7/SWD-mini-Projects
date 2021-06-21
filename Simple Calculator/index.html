@@ -1,0 +1,129 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Simple Calculator</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="Images/CalcIconO.png" type="image/x-icon">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: arial;
+			font-size: 20px;
+		}
+		body {
+			background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url("Images/CalcBG.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.mainApp {
+			width: 340px;
+			margin: 100px auto;
+		}
+		.display {
+			color: #fff;
+			width: 340px;
+			text-align: right;
+			font-size: 48px;
+			padding: 5px 15px;
+		}
+		.keypad {
+			width: 340px;
+			padding: 10px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+		}
+		button {
+			width: 70px;
+			height: 70px;
+			border: 1px solid black;
+			border-radius: 70px;
+			border: none;
+			margin: 4px;
+			background-color: #333;
+			color: #fff;
+			cursor: pointer;
+			user-select: none;
+		}
+		button:active {
+			opacity: 0.6;
+		}
+
+		#key16 {
+			width: 144px;
+		}
+		#key0, 
+		#key1, 
+		#key2 {
+			background-color: #a5a5a5;
+		}
+		#key3, 
+		#key7,
+		#key11, 
+		#key15, 
+		#key18 {
+			background-color: #ffa010;
+			font-size: 2em;
+		}
+	</style>
+</head>
+<body>
+	<div class="mainApp">
+		<div class="display">0</div>
+		<div class="keypad"></div>
+	</div>
+	<script>
+		let display = document.querySelector('.display');
+		let keypad = document.querySelector('.keypad');
+		let keys = ['AC','C','%','/','7','8','9','*','4','5','6','-','1','2','3','+','0','.','='];
+		let operators = ['+','-','*','/','.'];
+		for (k in keys){
+			if (keys[k] == 'AC') {
+				keypad.innerHTML += `<button id="key${k}" onclick="clearAll()">${keys[k]}</button>`;
+			} else if (keys[k] == 'C') {
+				keypad.innerHTML += `<button id="key${k}" onclick="clearLast()">${keys[k]}</button>`;
+			} else if (keys[k] == '=') {
+				keypad.innerHTML += `<button id="key${k}" onclick="calculate()">${keys[k]}</button>`;
+			} else if (keys[k] == '*') {
+				keypad.innerHTML += `<button id="key${k}" onclick="displayKeys('${keys[k]}')">&#215</button>`;
+			} else if (keys[k] == '/') {
+				keypad.innerHTML += `<button id="key${k}" onclick="displayKeys('${keys[k]}')">&#247</button>`;
+			} else {
+				keypad.innerHTML += `<button id="key${k}" onclick="displayKeys('${keys[k]}')">${keys[k]}</button>`;
+			}
+		}
+		function displayKeys(key) {
+			let current = display.innerHTML;
+			let last = current[current.length-1];
+			if (current == "0"){
+				display.innerHTML = key;
+			} else if (operators.includes(last) && operators.includes(key)){
+				display.innerHTML = current.substring(0,current.length-1) + key;
+			} else {
+				display.innerHTML += key;
+		    }
+		}
+		function calculate() {
+			let calcText = display.innerHTML;
+			display.innerHTML = eval(calcText);
+		}
+		function clearAll() {
+			display.innerHTML = '0';
+		}
+		function clearLast() {
+			let current = display.innerHTML;
+			if (current.length == 1){
+				display.innerHTML = '0';
+			} else {
+			display.innerHTML = current.substring(0,current.length-1);
+			}
+		}
+	</script>
+</body>
+</html>

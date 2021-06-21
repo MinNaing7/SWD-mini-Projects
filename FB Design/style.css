@@ -1,0 +1,338 @@
+
+:root {
+	--primary : #008bf0;
+	--dark : #18191a;
+	--simi-dark : #242526;
+	--soft-dark : #3a3b3c;
+	--danger : #f02849;
+	--success : #44b968;
+	--warning : #dda728;
+	--text : #b7b9bd;
+	--light-text: #fff;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: var(--text);
+	font-family: sans-serif;
+}
+body {
+	background-color: var(--dark);
+}
+
+nav {
+	background-color: var(--simi-dark);
+	display: flex;
+}
+.left {
+	width: 25%;
+}
+.center {
+	width: 50%;
+}
+.right {
+	width: 25%;
+}
+.leftBox {
+	padding: 10px;
+	display: flex;
+}
+.fbLogo {
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+}
+.searchBox {
+	background-color: var(--soft-dark);
+	display: flex;
+	align-items: center;
+	border-radius: 100px;
+}
+.searchBox i.searchbar {
+	font-size: 20px;
+	padding-left: 10px;
+}
+.searchInput {
+	padding: 10px;
+	font-size: 15px;
+	background-color: transparent;
+	border: none;
+}
+.searchInput:focus {
+	outline: none;
+}
+
+.centerBox {
+	margin: 0 50px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.items {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 100px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.items i.icon {
+	font-size: 25px;
+	padding: 10px;
+	width: 100px;
+	display: flex;
+	justify-content: center;
+}
+.items i.icon:hover:not(.active) {
+	background-color: var(--soft-dark);
+	border-radius: 10px;
+}
+.active {
+	color: var(--primary);
+	border-bottom: 3px solid var(--primary);
+}
+span.noti {
+	position: absolute;
+	background-color: var(--danger);
+	color: var(--light-text);
+	font-size: 15px;
+	padding: 3px;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 5px;
+	right: 20px;
+}
+.rightBox {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.rightBox .profile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5px;
+}
+.rightBox .profile:hover {
+	background-color: var(--soft-dark);
+	border-radius: 100px;
+}
+.lisaImg {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin: 5px;
+}
+.lisaName {
+	margin: 10px 8px;
+	margin-left: 3px;
+	font-size: 20px;
+	color: var(--light-text);
+}
+.buttonBox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5px;
+}
+.button {
+	width: 40px;
+	height: 40px;
+	background-color: var(--soft-dark);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 5px;
+	position: relative;
+}
+.button:hover {
+	background-color: var(--dark);
+}
+.button i {
+	font-size: 18px;
+	color: var(--light-text);
+}
+.button span.noti {
+	font-size: 12px;
+	padding: 2px;
+	width: 15px;
+	height: 15px;
+	top: 0;
+	right: 0;
+}
+.fbMainBody {
+	display: flex;
+}
+.settingSide {
+	width: 25%;
+}
+.newfeedSide {
+	width: 50%;
+}
+.chatboxSide {
+	width: 25%;
+}
+.mydayArray {
+	margin: 10px 20px;
+	display: flex;
+	flex-wrap: nowrap;
+	overflow: hidden;
+	position: relative;
+}
+.myday {
+	min-width: 110px;
+	height: 180px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 10px;
+	position: relative;
+	margin-right: 10px;
+}
+.myday:hover {
+	transform: scale(0.95);
+}
+.myday:first-child {
+	background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("Images/tom.jpg");
+	background-position: center;	
+}
+.myday:first-child div.ownerProfile {
+	background-color: rgba(0,0,0,0.8);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.myday:first-child div.ownerProfile i{
+	color: var(--light-text);
+	font-size: 20px ;
+}
+.mydaySiteBtn {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background-color: var(--simi-dark);
+	border-radius: 50%;
+	font-size: 22px;
+	color: var(--text);
+	right: 15px;
+	top: 65px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.mydaySiteBtn:hover {
+	background-color: var(--soft-dark);
+}
+.jennieMyday {
+	background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("Images/jennieMyday.jpg");
+}
+.lisaMyday {
+	background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("Images/lisaMyday.jpg");
+}
+.roseMyday {
+	background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("Images/roseMyday.jpg");
+}
+.jisooMyday {
+	background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("Images/jisooMyday.jpg");
+}
+.bellaMyday {
+	background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("Images/bellaMyday.jpg");	
+}
+.ownerProfile {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 2px solid var(--primary);
+	top: 5px;
+	left: 5px;
+}
+.ownerName {
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+	font-weight: bold;
+	color: var(--light-text);
+}
+.postingBox {
+	background-color: var(--simi-dark);
+	margin: 10px;
+	border-radius: 10px;
+}
+.postInputBox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 7px 10px;
+}
+.profileImg {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-right: 10px;
+}
+.postInput {
+	background-color: var(--soft-dark);
+	border: none;
+	padding: 10px 20px;
+	border-radius: 100px;
+	flex-grow: 1;
+}
+.postInput:focus {
+	outline: none;
+}
+.postBtnBox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 7px 10px;
+}
+.postBtn {
+	flex-grow: 1;
+	background-color: transparent;
+	border: none;
+	padding: 6px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.postBtn:hover {
+	background-color: var(--soft-dark);
+}
+.postBtn i {
+	font-size: 20px;
+	margin-right: 5px;
+}
+.postBtn span {
+	font-size: 15px;
+}
+.live i {
+	color: var(--danger);
+}
+.photo i {
+	color: var(--success) ;
+}
+.location i {
+	color: var(--warning);
+}
+.hLine {
+	height: 1px;
+	background-color: var(--soft-dark);
+	margin: 0 10px;
+}
+.vLine {
+	width: 1px;
+	height: 25px;
+	background-color: var(--soft-dark);
+}

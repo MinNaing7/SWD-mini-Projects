@@ -1,0 +1,130 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-family: cursive;
+}
+section {
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)),url("Images/background1.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.mainApp { 
+	width: 350px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.section1 {
+	border-radius: 10px;
+	background-color: #278ea5;
+	padding: 20px;
+}
+.section1 label h2 {
+	font-size: 2em;
+	color: white;
+}
+.section1 input {
+	font-family: cursive;
+	font-size: 1em;
+	padding: 10px;
+	border: none;
+	background-color: transparent;
+	color: #fff;
+}
+.section1 input::placeholder {
+	color: #fff;
+	opacity: 0.5;
+}
+.section1 input:focus {
+	border: none;
+	outline: none;
+}
+.section1 button {
+	width: 45px;
+	height: 45px;
+	background-color: transparent;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	margin-left: 10px;
+}
+.section1 button i {
+	font-size: 2em;
+	color: #fff;
+}
+.section2 {
+	position: relative;
+	background-color: #eee;
+	border-radius: 10px;
+	height: 350px;
+	padding-top: 20px;
+	overflow-y: auto;
+	transform: translateY(-20px);
+	z-index: -1;
+}
+.section2 ul {
+	list-style-type: none;
+}
+.section2 ul li {
+	background-color: #eee;
+	padding: 5px 20px;
+	font-size: 1.2em;
+}
+.section2 ul li:hover {
+	background-color: #fff;
+}
+li button {
+	float: right;
+	width: 35px;
+	height: 35px;
+	border: none;
+	background-color: transparent;
+	margin-top: 10px;
+}
+li button i {
+	font-size: 2em;
+	color: #278ea5;
+}
+li button.del:hover i {
+	color: #d72323;
+}
+li button.edit:hover i {
+	color: #17b978;
+}
+li span.text {
+	font-size: 1em;
+	color: #278ea5;
+	font-weight: bold;
+}
+li span.time {
+	font-size: 0.6em;
+	color: gray;
+}
+@media screen and (max-width: 600px){
+	.mainApp {
+		width: 100%;
+		height: 100vh;
+		position: relative;
+	}
+	.section1 input {
+		width: 100%;
+	}
+	.section1 button {
+		position: fixed;
+		bottom: 30px;
+		right: 30px;
+		border: none;
+		background-color: #278ea5;
+	}
+	.section1 button i {
+		color: #fff;
+	}
+	.section2 {
+		height: auto;
+	}
+}
